@@ -22,6 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<!--        đăng kí service-->
+        <service android:name=".myService"/>
     </application>
 
 </manifest>
