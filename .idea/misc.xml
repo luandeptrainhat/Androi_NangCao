@@ -3,8 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/drawable/re.xml" value="0.179" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/activity_dangki_khoahoc.xml" value="0.1" />
         <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/activity_map.xml" value="0.25" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/activity_news.xml" value="0.2359375" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/activity_quanli_khoahoc.xml" value="0.25" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/fragment_da_dang_ki.xml" value="0.25" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/fragment_danhsach.xml" value="0.25" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/item_da_dang_ki.xml" value="0.24895833333333334" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/item_dangki.xml" value="0.24895833333333334" />
+        <entry key="..\:/code/Github/Androi_NangCao/app/src/main/res/layout/item_khoa_hoc.xml" value="0.25" />
       </map>
     </option>
   </component>

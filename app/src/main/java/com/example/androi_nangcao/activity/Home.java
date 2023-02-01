@@ -2,15 +2,30 @@ package com.example.androi_nangcao.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.androi_nangcao.R;
 
 public class Home extends AppCompatActivity {
-
+ImageView imghoctap ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+         imghoctap = findViewById(R.id.imghoctap);
+
+        imghoctap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(Home.this, "alo", Toast.LENGTH_SHORT).show();
+                Intent  intent = new Intent(Home.this, Quanli_khoahoc.class);
+                startActivity(intent);
+            }
+        });
     }
 }

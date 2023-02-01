@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="30dp"
+        >
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/neural"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="center"
+        >
+
+           <TextView
+               android:id="@+id/txtName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="Lập trình Android"
+               android:textSize="20sp"
+
+               android:textStyle="bold" />
+           <TextView
+               android:id="@+id/txtCode"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Ca 2 - 246 | Thi ngày 22/2/2022"
+               android:gravity="center"
+             />
+           <Button
+               android:id="@+id/btnDangKi"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#F1A431"
+               android:gravity="center"
+               android:text="Đăng kí khóa học"/>
+       </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
