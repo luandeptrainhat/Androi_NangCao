@@ -40,6 +40,7 @@
                 android:src="@mipmap/course" />
 
             <ImageView
+                android:id="@+id/imgmap"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="40dp"
@@ -54,12 +55,14 @@
 
             <ImageView
                 android:layout_width="100dp"
+                android:id="@+id/imgnew"
                 android:layout_height="100dp"
                 android:layout_margin="40dp"
                 android:src="@mipmap/news" />
 
             <ImageView
                 android:layout_width="100dp"
+                android:id="@+id/imgSocial"
                 android:layout_height="100dp"
                 android:layout_margin="40dp"
                 android:src="@mipmap/social" />

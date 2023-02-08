@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <LinearLayout
+        android:background="@drawable/boder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -35,9 +36,17 @@
                android:id="@+id/txtCode"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="Ca 2 - 246 | Thi ngày 22/2/2022"
+               android:text="Ca 2 - 246 "
                android:gravity="center"
              />
+           <TextView
+               android:id="@+id/txtTeacher"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Thầy Định"
+               android:textSize="20sp"
+               android:gravity="center"
+               />
            <Button
                android:id="@+id/btnDangKi"
                android:layout_width="wrap_content"

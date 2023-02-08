@@ -11,19 +11,24 @@ import android.widget.Toast;
 import com.example.androi_nangcao.R;
 
 public class Home extends AppCompatActivity {
-ImageView imghoctap ;
+    ImageView imghoctap, imgmap, imgnew , imgSocial;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-         imghoctap = findViewById(R.id.imghoctap);
+        imghoctap = findViewById(R.id.imghoctap);
+        imgmap = findViewById(R.id.imgmap);
+        imgnew = findViewById(R.id.imgnew);
+        imgSocial = findViewById(R.id.imgSocial);
+
 
         imghoctap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                Toast.makeText(Home.this, "alo", Toast.LENGTH_SHORT).show();
-                Intent  intent = new Intent(Home.this, Quanli_khoahoc.class);
+                Intent intent = new Intent(Home.this, Quanli_khoahoc.class);
                 startActivity(intent);
             }
         });
