@@ -58,4 +58,16 @@ public class MonHocDao {
             return false;
         }return  true;
     }
+    public ArrayList<Monhoc> getMyCourse(int idNguoiDung){
+        ArrayList<Monhoc> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT mh.code, mh.name, mh.teacher, dk.id  FROM MONHOC mh, DANGKI dk WHERE mh.code = dk.code AND dk.id =?",new String[]{String.valueOf(idNguoiDung)});
+        if (cursor.getCount()>0){
+            cursor.moveToFirst();
+            do {
+                list.add(new Monhoc(cursor.getString(0),cursor.getString(1), cursor.getString(2), cursor.getInt(3) ));
+            }while (cursor.moveToNext());
+        }
+        return  list;
+    }
 }

@@ -16,8 +16,16 @@ public class DSKhoaHoc_Service extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         int idNguoiDung = intent.getIntExtra("idNguoiDung",-1);
+        int status = intent.getIntExtra("status",-1);
+
         MonHocDao monHocDao = new MonHocDao(this);
-        ArrayList<Monhoc> list = monHocDao.getDSMonHoc(idNguoiDung);
+        ArrayList<Monhoc> list = new ArrayList<>();
+        if (status==1){
+           list= monHocDao.getDSMonHoc(idNguoiDung);
+        }else {
+            list= monHocDao.getMyCourse(idNguoiDung);
+        }
+
 
         Intent intentBR = new Intent();
         Bundle bundle = new Bundle();

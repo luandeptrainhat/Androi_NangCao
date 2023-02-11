@@ -22,10 +22,21 @@ public class Quanli_khoahoc extends AppCompatActivity {
         dskhoahoc.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-              startActivity(new Intent(Quanli_khoahoc.this, DSKhoaHoc.class));
+             Intent intent = new Intent(Quanli_khoahoc.this,DSKhoaHoc.class);
+             intent.putExtra("status",1);
+             //laays tất cả khóa học
+              startActivity(intent);
           }
       });
-
+        khoahoccuatoi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Quanli_khoahoc.this,DSKhoaHoc.class);
+                intent.putExtra("status",0);
+                //laays  khóa học của tôi
+                startActivity(intent);
+            }
+        });
 
     }
 
