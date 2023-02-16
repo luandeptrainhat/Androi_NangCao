@@ -1,9 +1,5 @@
 package com.example.androi_nangcao.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -12,11 +8,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.androi_nangcao.R;
 import com.example.androi_nangcao.Service.DSKhoaHoc_Service;
 import com.example.androi_nangcao.adapter.DSKhoaHocAdapter;
 import com.example.androi_nangcao.model.Monhoc;
-
 
 import java.util.ArrayList;
 
@@ -31,13 +30,16 @@ public class DSKhoaHoc extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ds_khoa_hoc);
-        intentFilter = new IntentFilter();
-        intentFilter.addAction("layDSMonHoc");
-        intentFilter.addAction("DKvH ");
+        recyclerDS = findViewById(R.id.recycleDS);
 
         Intent intent = getIntent();
         status = intent.getIntExtra("status", -1);
-        recyclerDS = findViewById(R.id.recycleDS);
+
+        intentFilter = new IntentFilter();
+        intentFilter.addAction("layDSMonHoc");
+        intentFilter.addAction("DKvH");
+
+
         getDS();
 
     }
@@ -49,7 +51,7 @@ public class DSKhoaHoc extends AppCompatActivity {
         intent.putExtra("idNguoiDung", idNguoiDung);
         intent.putExtra("status", status);
         startService(intent);
-        
+
     }
 
     private void loadData(ArrayList<Monhoc> list) {
@@ -81,9 +83,8 @@ public class DSKhoaHoc extends AppCompatActivity {
             } else if (intent.getAction().equals("DKvH")) {
                 boolean status = intent.getBooleanExtra("status", false);
                 if (status) {
-                    recyclerDS = findViewById(R.id.recycleDS);
                     getDS();
-                    Toast.makeText(context, "thành công", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "thành công", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(context, "Không thành công", Toast.LENGTH_SHORT).show();
                 }

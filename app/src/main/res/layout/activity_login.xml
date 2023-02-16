@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.login"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".activity.login">
 
     <ImageView
         android:layout_width="match_parent"
@@ -14,15 +14,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="16dp"
-
         android:background="@drawable/bo_goc">
 
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -35,7 +34,7 @@
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/username"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -64,14 +63,29 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/fogot"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="0dp"
             android:backgroundTint="@color/white"
             android:text="Login"
             android:textColor="@color/blue"
-            android:textSize="30dp" />
+            android:textSize="15sp" />
 
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btngg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btnFB"
+            android:layout_below="@+id/btngg"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 

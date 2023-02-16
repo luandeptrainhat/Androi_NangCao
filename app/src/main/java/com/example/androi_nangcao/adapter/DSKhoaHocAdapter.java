@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,7 +50,6 @@ public class DSKhoaHocAdapter extends RecyclerView.Adapter<DSKhoaHocAdapter.View
 
         if (idNguoiDung == list.get(holder.getAdapterPosition()).getId()){
             holder.btnDangki.setText("Hủy đăng kí");
-
             holder.btnDangki.setBackgroundColor(Color.RED);
         }else {
             holder.btnDangki.setText("Đăng kí");
